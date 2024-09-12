@@ -9,6 +9,7 @@ Python comes bundled with the venv module to create virtual environments.
 
 Create an environment
 Create a project folder and a .venv folder within:
+
 Linux:
 $ mkdir myproject
 $ cd myproject
