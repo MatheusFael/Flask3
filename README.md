@@ -9,16 +9,15 @@ Python comes bundled with the venv module to create virtual environments.
 
 Create an environment
 Create a project folder and a .venv folder within:
+After you have entered in th directory
 
 Linux:
-$ mkdir myproject
-$ cd myproject
+
 $ python3 -m venv .venv
 $ . .venv/bin/activate
 
 Windows: 
-> mkdir myproject
-> cd myproject
+
 > py -3 -m venv .venv
 > .venv\Scripts\activate
 >
