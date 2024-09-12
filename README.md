@@ -1,4 +1,9 @@
+important links  : https://flask-migrate.readthedocs.io/en/latest/
+https://flask.palletsprojects.com/en/3.0.x/
+
 Virtual environments
+
+
 Use a virtual environment to manage the dependencies for your project, both in development and in production.
 
 What problem does a virtual environment solve? The more Python projects you have, the more likely it is that you need to work with different versions of Python libraries, or even Python itself. Newer versions of libraries for one project can break compatibility in another project.
@@ -24,3 +29,10 @@ Windows:
 Something that is very important:
 pip install Flask-SQLAlchemy
 
+
+Flask Migrate
+pip install Flask-Migrate
+pip install Flask-script
+$ flask db init
+$ flask db migrate -m "Initial migration."
+$ flask db upgrade
