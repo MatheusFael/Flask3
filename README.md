@@ -14,8 +14,14 @@ Linux:
 $ mkdir myproject
 $ cd myproject
 $ python3 -m venv .venv
+$ . .venv/bin/activate
 
 Windows: 
 > mkdir myproject
 > cd myproject
 > py -3 -m venv .venv
+> .venv\Scripts\activate
+>
+Something that is very important:
+pip install Flask-SQLAlchemy
+
