@@ -25,7 +25,7 @@ Windows:
 
 > py -3 -m venv .venv
 > .venv\Scripts\activate
->
+
 Something that is very important:
 pip install Flask-SQLAlchemy
 
@@ -36,3 +36,7 @@ pip install Flask-script
 $ flask db init
 $ flask db migrate -m "Initial migration."
 $ flask db upgrade
+
+Para fazer o Login: 
+pip install -U Flask-WTF
+
