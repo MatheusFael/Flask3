@@ -1,12 +1,18 @@
-from flask import Flask 
-from flask_sqlalchemy import SQLAlchemy # type: ignore
-from sqlalchemy.orm import DeclarativeBase # type: ignore
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+import os
 
+app = Flask(__name__)
 
-app = Flask (__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///storage.db'
+# Carregando as configurações do arquivo config.py na raiz do projeto
+app.config.from_object('config')
+
+# Inicializando o banco de dados
 db = SQLAlchemy(app)
 
+# Configurando Flask-Migrate
+migrate = Migrate(app, db)
 
-from app.controllers import defaultz
-
+# Importando as rotas
+from app.controllers import default
