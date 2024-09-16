@@ -1,6 +1,7 @@
 from app import db
+from flask_login import UserMixin
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     __tablename__ = 'users' 
 
     id = db.Column(db.Integer, primary_key=True) 
@@ -8,20 +9,6 @@ class User(db.Model):
     password = db.Column(db.String, unique=True) 
     name = db.Column(db.String) 
     email = db.Column(db.String, unique=True) 
-
-
-    @property
-    def is_active(self):
-        return True
-    
-    @property
-    def is_anonymous(self):
-        return False
-    
-    @property
-    def get_id(self):
-        return str(self.id)
-
 
     def __init__(self, username, password, name, email): 
         self.username = username
@@ -57,3 +44,6 @@ class Follow(db.Model):
 
     user = db.relationship("User", foreign_keys=[user_id])  
     follower = db.relationship("User", foreign_keys=[follower_id])  
+
+    def __repr__(self):
+        return "<Follow %r>" % self.id
